@@ -14,4 +14,5 @@ return [
     Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle::class => ['all' => true],
     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
     Symfony\UX\React\ReactBundle::class => ['all' => true],
+    OpenAI\Symfony\OpenAIBundle::class => ['all' => true],
 ];

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OpenAI | API
+{% endblock %}
+
+{% block body %}
+
+        {% if imageUrl is not null %}
+            <img src="{{ imageUrl }}" alt="Generated Image">
+        {% endif %}
+
+{% endblock %}
