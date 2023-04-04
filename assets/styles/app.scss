@@ -1,11 +1,30 @@
 // customize some Bootstrap variables
-$primary: darken(#428bca, 20%);
+$primary: darken(#0b263f, 20%);
 
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
 
 body {
-    background-color: $primary;
+    background: black;
 }
 
+.title-border {
+    border-style: solid;
+    border-width: 0.1rem;
+    border-image: linear-gradient(90deg, #00dbde, #fc00ff) 1;
+}
 
+.title-gradient {
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.focus-only:focus {
+    outline: 0px solid transparent;
+}
+
+.my-textarea::placeholder {
+    color: black;
+}

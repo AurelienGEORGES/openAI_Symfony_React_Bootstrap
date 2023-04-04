@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OpenAI | API
+{% endblock %}
+
+{% block body %}
+    <div {{ react_component('formDallE')}} class="d-flex justify-content-center"></div>
+	{% if imageUrl is not null %}
+		<div class="my-1 d-flex justify-content-center border border-3 border-white rounded-3">
+			<img src="{{ imageUrl }}" alt="Generated Image" class="rounded-3 w-100">
+		</div>
+	{% endif %}
+
+{% endblock %}

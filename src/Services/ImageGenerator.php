@@ -6,6 +6,8 @@ use OpenAI\Client;
 
 class ImageGenerator
 {
+    
+
     private Client $client;
     private string $apiKey;
 
@@ -17,11 +19,14 @@ class ImageGenerator
 
     public function fetchImage(): string
     {
+
+        $promptDallE  = $_GET['promptDallE'];
+
         $response = $this->client->images()->create(
             [
-                'prompt' => 'a cat with green eyes',
+                'prompt' => $promptDallE,
                 'n' => 1,
-                'size' => '256x256',
+                'size' => '1024x1024',
                 'response_format' => 'url'
             ]
         );

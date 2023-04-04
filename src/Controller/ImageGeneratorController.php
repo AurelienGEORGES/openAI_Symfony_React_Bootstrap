@@ -18,13 +18,19 @@ class ImageGeneratorController extends AbstractController
         $this->imageGenerator = $imageGenerator;
     }
 
-    #[Route('/image/generator', name: 'app_image_generator')]
+    #[Route('/image', name: 'app_image')]
+    public function index(): Response
+    {
+        return $this->render('image_generator/dallEform.html.twig', []);
+    }
+
+    #[Route('/image/generator', name: 'app_image_generator', methods: ['GET'])]
 
     public function generateImage(Request $imageUrl, ImageGenerator $ImageGenerator): Response
     {
 
-        return $this->render('image_generator/index.html.twig', [
-            'imageUrl' => $ImageGenerator->fetchImage($imageUrl)
+        return $this->render('image_generator/dallEresponse.html.twig', [
+            'imageUrl' => $ImageGenerator->fetchImage($imageUrl),
         ]);
     }
 }
