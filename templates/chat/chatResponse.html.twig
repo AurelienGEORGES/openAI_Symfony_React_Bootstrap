@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OpenAI | API
+{% endblock %}
+
+{% block body %}
+	<div {{ react_component('formGPT')}} class="d-flex justify-content-center"></div>
+	{% if answer is not null %}
+		<div class="my-1 d-flex justify-content-center border border-3 border-white rounded-3"> 
+			<p class="p-3 fs-4 text-white fw-normal">{{ answer }}</p>		
+        </div>
+	{% endif %}
+
+{% endblock %}

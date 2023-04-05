@@ -31,3 +31,12 @@ services:
         class: App\Controller\ImageGeneratorController
         arguments:
             $imageGenerator: '@App\Services\ImageGenerator'
+    
+    App\Services\ChatGPT:
+        arguments:
+            $apiKey: '%env(OPENAI_API_KEY)%'
+
+    App\Controller\ChatController:
+        class: App\Controller\ChatController
+        arguments:
+            $chatGPT: '@App\Services\ChatGPT'

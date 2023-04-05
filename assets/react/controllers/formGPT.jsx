@@ -1,38 +1,38 @@
 import React, { useState } from 'react'
 
-const formDallE = () => {
+const formGPT = () => {
 
-    const [promptDallE, setPromptDallE] = useState('')
+    const [promptGPT, setPromptGPT] = useState('')
 
     return (
         <section className='title-border my-5 p-5 w-100'>
-            <h2 className="title-gradient text-center p-5 fs-2 fw-normal">Generate an image with DALL-E of OpenAI</h2>
-            <form action="https://127.0.0.1:8000/image/generator" method="get">
+            <h2 className="title-gradient text-center p-5 fs-2 fw-normal">This chat use GPT-3 of OpenAI</h2>
+            <form action="https://127.0.0.1:8000/chat/answer" method="get">
                 <label
-                    htmlFor="Enter-PromptDallE"
+                    htmlFor="Enter-PromptGPT"
                     className="d-block my-3 fs-4 text-white fw-normal">
-                    DALL-E IA will generate an image guided by your prompt :
+                    GPT will answer at your prompt :
                 </label>
                 <textarea
                     id="textareaImageId"
                     rows="5"
                     cols="100"
-                    name="promptDallE"
+                    name="promptGPT"
                     maxLength="500"
                     autoComplete="off"
-                    onChange={(e) => setPromptDallE(e.target.value)}
+                    onChange={(e) => setPromptGPT(e.target.value)}
                     className="d-block my-3 p-3 focus-only my-textarea rounded-3 fs-3 fw-normal w-100"
-                    placeholder="enter your text for DALL-E IA here..."
+                    placeholder="enter your text for GPT IA here..."
                     required>
                 </textarea>
                 <button
                     type="submit"
                     className="d-block btn btn-outline-light my-3 fs-3 fw-normal">
-                    Send to DALL-E
+                    Send to GPT
                 </button>
             </form>
         </section>
     )
 }
 
-export default formDallE
+export default formGPT
