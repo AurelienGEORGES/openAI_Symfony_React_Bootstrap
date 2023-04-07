@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Services;
-use OpenAI\Responses\CompletionResponse;
 
 use OpenAI\Client;
 
@@ -20,14 +19,11 @@ class StreamedCompletion
     {
         $promptDavinci = $_GET['promptDavinci'];
 
-        $responses = [];
-
         $stream = $this->client->completions()->createStreamed([
             'model' => 'text-davinci-003',
-            'prompt' => $promptDavinci
+            'prompt' => $promptDavinci,
+            'max_tokens' => 2048
         ]);
-
-        $responses = [];
 
         foreach ($stream as $response) {
             $responses[] = $response->choices[0]->text;

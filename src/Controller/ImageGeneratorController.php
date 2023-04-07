@@ -28,9 +28,8 @@ class ImageGeneratorController extends AbstractController
 
     public function generateImage(Request $imageUrl, ImageGenerator $ImageGenerator): Response
     {
-
         return $this->render('image_generator/dallEresponse.html.twig', [
-            'imageUrl' => $ImageGenerator->fetchImage($imageUrl),
+            'imageUrl' => $ImageGenerator->fetchImage($imageUrl)
         ]);
     }
 }

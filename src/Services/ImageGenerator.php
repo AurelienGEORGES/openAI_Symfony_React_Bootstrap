@@ -6,8 +6,6 @@ use OpenAI\Client;
 
 class ImageGenerator
 {
-    
-
     private Client $client;
     private string $apiKey;
 

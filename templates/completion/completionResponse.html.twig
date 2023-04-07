@@ -7,6 +7,6 @@
 {% block body %}
 	<div {{ react_component('formDavinci')}} class="d-flex justify-content-center"></div>
 	<div class="my-1 d-flex justify-content-center border border-3 border-white rounded-3 screen-size">
-		<p class="p-3 fs-4 text-white fw-normal">the completion of your text is : {{ completion|join('') }}</p>
+		<p class="p-3 fs-4 text-white fw-normal">{{ completion|join('') }}</p>
 	</div>
 {% endblock %}

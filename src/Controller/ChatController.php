@@ -29,7 +29,7 @@ class ChatController extends AbstractController
     public function obtainResponse(Request $answer, ChatGPT $chatGPT): Response
     {
         return $this->render('chat/chatResponse.html.twig', [
-            'answer' => $chatGPT->obtainResponse($answer),
+            'answer' => $chatGPT->obtainResponse($answer)
         ]);
     }
 }

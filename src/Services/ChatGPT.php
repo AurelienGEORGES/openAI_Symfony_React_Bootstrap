@@ -6,8 +6,6 @@ use OpenAI\Client;
 
 class ChatGPT
 {
-
-
     private Client $client;
     private string $apiKey;
 
