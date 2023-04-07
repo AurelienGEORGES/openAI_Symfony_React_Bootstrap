@@ -5,7 +5,7 @@ const formDallE = () => {
     const [promptDallE, setPromptDallE] = useState('')
 
     return (
-        <section className='title-border my-5 p-5 w-100'>
+        <section className='title-border my-5 p-5 screen-size'>
             <h2 className="title-gradient text-center p-5 fs-2 fw-normal">Generate an image with DALL-E of OpenAI</h2>
             <form action="https://127.0.0.1:8000/image/generator" method="get">
                 <label

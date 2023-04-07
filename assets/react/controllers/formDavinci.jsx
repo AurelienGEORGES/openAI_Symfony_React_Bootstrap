@@ -1,38 +1,38 @@
 import React, { useState } from 'react'
 
-const formGPT = () => {
+const formDavinci = () => {
 
-    const [promptGPT, setPromptGPT] = useState('')
+    const [promptDavinci, setPromptDavinci] = useState('')
 
     return (
         <section className='title-border my-5 p-5 screen-size'>
-            <h2 className="title-gradient text-center p-5 fs-2 fw-normal">This chat use GPT-3 of OpenAI</h2>
-            <form action="https://127.0.0.1:8000/chat/answer" method="get">
+            <h2 className="title-gradient text-center p-5 fs-2 fw-normal">The model used is Davinci of OpenAI to obtain AI text completion</h2>
+            <form action="https://127.0.0.1:8000/completion/answer" method="get">
                 <label
-                    htmlFor="Enter-PromptGPT"
+                    htmlFor="Enter-PromptDavinci"
                     className="d-block my-3 fs-4 text-white fw-normal">
-                    GPT will answer at your prompt :
+                    Davinci model will complet your prompt :
                 </label>
                 <textarea
                     id="textareaImageId"
                     rows="5"
                     cols="100"
-                    name="promptGPT"
+                    name="promptDavinci"
                     maxLength="500"
                     autoComplete="off"
-                    onChange={(e) => setPromptGPT(e.target.value)}
+                    onChange={(e) => setPromptDavinci(e.target.value)}
                     className="d-block my-3 p-3 focus-only my-textarea rounded-3 fs-3 fw-normal w-100"
-                    placeholder="enter your text for GPT IA here..."
+                    placeholder="enter your text for Davinci model here..."
                     required>
                 </textarea>
                 <button
                     type="submit"
                     className="d-block btn btn-outline-light my-3 fs-3 fw-normal">
-                    Send to GPT
+                    Send to Davinci
                 </button>
             </form>
         </section>
     )
 }
 
-export default formGPT
+export default formDavinci

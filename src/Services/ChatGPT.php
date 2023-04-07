@@ -30,8 +30,8 @@ class ChatGPT
                 ]
             ]
         );
-
-        $answer = $response->choices[0]->message->content;
+        
+        $answer = $response->choices[0]->message->content;      
 
         return $answer;
     }
