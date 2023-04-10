@@ -5,6 +5,7 @@
 
 {% block body %}
 
-    <div {{ react_component('formGPT') }} class="d-flex justify-content-center"></div>
+    <div {{ react_component('header', { title: 'This chat use GPT-3 of OpenAI' } ) }}></div>
+    <div {{ react_component('form', { formURL: 'https://127.0.0.1:8000/chat/answer', labelTitle: 'GPT will answer at your prompt :', placeholderTitle: 'enter your text for GPT IA here...', buttonTitle: 'Send to GPT' } ) }} class="d-flex justify-content-center"></div>
 
 {% endblock %}

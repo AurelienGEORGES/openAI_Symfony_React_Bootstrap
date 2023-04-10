@@ -18,13 +18,13 @@ class ChatGPT
     public function obtainResponse(): string
     {
 
-        $promptGPT  = $_GET['promptGPT'];
+        $prompt  = $_GET['prompt'];
 
         $response = $this->client->chat()->create(
             [
                 'model' => 'gpt-3.5-turbo',
                 'messages' => [
-                    ['role' => 'user', 'content' => $promptGPT],
+                    ['role' => 'user', 'content' => $prompt],
                 ]
             ]
         );

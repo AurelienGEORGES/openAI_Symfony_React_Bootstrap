@@ -18,11 +18,11 @@ class ImageGenerator
     public function fetchImage(): string
     {
 
-        $promptDallE  = $_GET['promptDallE'];
+        $prompt  = $_GET['prompt'];
 
         $response = $this->client->images()->create(
             [
-                'prompt' => $promptDallE,
+                'prompt' => $prompt,
                 'n' => 1,
                 'size' => '1024x1024',
                 'response_format' => 'url'

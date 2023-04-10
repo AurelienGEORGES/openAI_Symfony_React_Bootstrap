@@ -4,7 +4,8 @@
 {% endblock %}
 
 {% block body %}
-    <div {{ react_component('formDallE')}} class="d-flex justify-content-center"></div>
+	<div {{ react_component('header', { title: 'Generate an image with DALL-E of OpenAI' } ) }}></div>
+	<div {{ react_component('form', { formURL: 'https://127.0.0.1:8000/image/generator', labelTitle: 'Generate an image with DALL-E of OpenAI', placeholderTitle: 'enter your text for DALL-E IA here...', buttonTitle: 'Send to DALL-E'} ) }} class="d-flex justify-content-center"></div>
 	{% if imageUrl is not null %}
 		<div class="my-1 d-flex justify-content-center border border-3 border-white rounded-3">
 			<img src="{{ imageUrl }}" alt="Generated Image" class="rounded-3 screen-size">

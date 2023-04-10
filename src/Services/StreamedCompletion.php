@@ -17,11 +17,11 @@ class StreamedCompletion
 
     public function streamedResponse(): array
     {
-        $promptDavinci = $_GET['promptDavinci'];
+        $prompt = $_GET['prompt'];
 
         $stream = $this->client->completions()->createStreamed([
             'model' => 'text-davinci-003',
-            'prompt' => $promptDavinci,
+            'prompt' => $prompt,
             'max_tokens' => 2048
         ]);
 

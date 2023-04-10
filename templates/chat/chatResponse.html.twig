@@ -4,7 +4,8 @@
 {% endblock %}
 
 {% block body %}
-	<div {{ react_component('formGPT')}} class="d-flex justify-content-center"></div>
+	<div {{ react_component('header', { title: 'This chat use GPT-3 of OpenAI' } ) }}></div>
+    <div {{ react_component('form', { formURL: 'https://127.0.0.1:8000/chat/answer', labelTitle: 'GPT will answer at your prompt :', placeholderTitle: 'enter your text for GPT IA here...', buttonTitle: 'Send to GPT' } ) }} class="d-flex justify-content-center"></div>
 	{% if answer is not null %}
 		<div class="my-1 d-flex justify-content-center border border-3 border-white rounded-3 screen-size"> 
 			<p class="p-3 fs-4 text-white fw-normal">{{ answer }}</p>		
