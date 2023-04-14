@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OpenAI | API
+{% endblock %}
+
+{% block body %}
+	<div {{ react_component('header', { title: 'Transcribe an audio file' } ) }}></div>
+	<div {{ react_component('FileInputMP3')}} class="d-flex justify-content-center"></div>
+{% endblock %}

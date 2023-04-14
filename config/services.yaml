@@ -51,4 +51,8 @@ services:
         arguments:
             $responseClass: 'OpenAI\Responses\CompletionStreamResponse'
 
+    App\Services\Audio:
+        arguments:
+            $apiKey: '%env(OPENAI_API_KEY)%'
+
     
