@@ -21,6 +21,16 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+* {
+    font-family: "BrunoAceSC-Regular";
+}
+
+@font-face {
+    font-family: "BrunoAceSC-Regular", Arial;
+    src: url("BrunoAceSC-Regular.ttf") format("ttf");
+}
+
+
 .focus-only:focus {
     outline: 0px solid transparent;
 }

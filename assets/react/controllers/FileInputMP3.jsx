@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
 const FileInputMP3 = () => {
     const [file, setFile] = useState(null);
@@ -21,20 +20,7 @@ const FileInputMP3 = () => {
         e.preventDefault();
         const formData = new FormData();
         formData.append('file', file);
-
-        axios
-            .post('/upload', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
-            })
-            .then((response) => {
-                console.log(response.data);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    };
+    }
 
     return (
         <section className='title-border my-5 p-5 screen-size'>
