@@ -5,12 +5,11 @@ const form = (props) => {
     const [prompt, setPrompt] = useState('')
 
     return (
-        <section className='title-border my-5 p-5 screen-size'>
+        <section className='border-form my-1 p-5 screen-size'>
             <form action={props.formURL} method="get">
                 <label
                     htmlFor="Enter-Prompt"
-                    className="d-block my-3 fs-4 text-white fw-normal">{props.labelTitle}
-                </label>
+                    className="d-block my-3 fs-4 text-white fw-normal"><b>{props.labelTitle}</b></label>
                 <textarea
                     rows="5"
                     cols="100"
@@ -24,7 +23,7 @@ const form = (props) => {
                 </textarea>
                 <button
                     type="submit"
-                    className="d-block btn btn-outline-light my-3 fs-3 fw-normal">{props.buttonTitle}
+                    className="d-block btn btn-outline-light my-3 fs-3 fw-normal"><b>{props.buttonTitle}</b>
                 </button>
             </form>
         </section>

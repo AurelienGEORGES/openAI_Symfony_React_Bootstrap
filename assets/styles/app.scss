@@ -1,28 +1,18 @@
-// customize some Bootstrap variables
-$primary: darken(#0b263f, 20%);
-
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
 
-body {
-    background: black;
-}
+// customize some Bootstrap variables
 
-.title-border {
-    border-style: solid;
-    border-width: 0.1rem;
-    border-image: linear-gradient(90deg, #00dbde, #fc00ff) 1;
-}
-
-.title-gradient {
-    background: linear-gradient(90deg, #00dbde, #fc00ff);
-    background-clip: content-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.screen-size {
+    width: auto;
+    max-width: 1024px;
 }
 
 * {
     font-family: "BrunoAceSC-Regular";
+    body {
+        background: black;
+    }
 }
 
 @font-face {
@@ -30,6 +20,64 @@ body {
     src: url("BrunoAceSC-Regular.ttf") format("ttf");
 }
 
+//pour la navbar
+a {
+    color: rgb(81, 227, 217, 1) !important;
+}
+
+a:hover {
+    color: rgba(81, 227, 217,0.5) !important
+}
+
+.border-nav {
+    background-color: rgba(81, 227, 217,0.2);
+    border-style: solid;
+    border-width: 0.3rem;
+    border-color: rgba(81, 227, 217,0.8);
+    border-radius: 0.2rem;  
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+#nav-btn {
+    border-style: solid;
+    border-width: 0.3rem;
+    border-color: rgba(81, 227, 217,0.2);
+    border-radius: 0.2rem;
+}
+
+//pour les titres
+.border-title {
+    background-color: rgb(4, 191, 191,0.2);
+    border-style: solid;
+    border-width: 0.3rem;
+    border-color: rgba(4, 191, 191,0.8);
+    border-radius: 0.2rem;  
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+h1 {
+    color: rgba(4, 191, 191,1) !important;
+}
+
+//pour les form
+.border-form {
+    background-color: rgb(0, 195, 182, 0.2);
+    border-style: solid;
+    border-width: 0.3rem;
+    border-color: rgba(0, 195, 182,0.8);
+    border-radius: 0.2rem;  
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+p {
+    color: rgba(0, 195, 182,1) !important; 
+}
 
 .focus-only:focus {
     outline: 0px solid transparent;
@@ -37,9 +85,6 @@ body {
 
 .my-textarea::placeholder {
     color: black;
+    font-weight: 700;
 }
 
-.screen-size {
-    width: auto;
-    max-width: 1024px;
-}
