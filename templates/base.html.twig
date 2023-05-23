@@ -18,60 +18,121 @@
 		{% endblock %}
 	</head>
 	<body>
-			{# ICI IL Y A LA NAVBAR #}
-			<div class="d-flex justify-content-around mb-3 border-nav">
-			<nav class="navbar navbar-expand-lg">
-				<div class="container-fluid">
-					<button id='nav-btn'class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-							<li class="nav-item mx-2">
-								<a class="nav-link fs-2 p-1 fw-normal" aria-current="page" href="{{ path('app_home') }}"><b>Accueil</b></a>
-							</li>
-							<li class="nav-item mx-2">
-								<a class="nav-link fs-2 p-1 fw-normal" aria-current="page" href="{{ path('app_image') }}"><strong><b>Dall-E</strong></b></a>
-							</li>
-							<li class="nav-item mx-2">
-								<a class="nav-link fs-2 p-1 fw-normal" aria-current="page" href="{{ path('app_completion') }}"><strong><b>DaVinci</strong></b></a>
-							</li>
-							<li class="nav-item mx-2">
-								<a class="nav-link fs-2 p-1 fw-normal" aria-current="page" href="{{ path('app_chat') }}"><strong><b>GPT 3.5 turbo</strong></b></a>
-							</li>
-							<li class="nav-item mx-2">
-								<a class="nav-link fs-2 p-1 fw-normal" aria-current="page" href="{{ path('app_transcribe') }}"><strong><b>Whisper</strong></b></a>
-							</li>
+		{# ICI IL Y A LA NAVBAR #}
+		<div class="d-flex justify-content-center">
+			<div class='d-flex justify-content-center'>
+				<div class="mb-3 d-flex justify-content-center">
 
-							{# {% if is_granted('ROLE_USER') %}
-															<li class="nav-item">
-																<a class="nav-link active" aria-current="page" href="{{ path('app_logout') }}">Déconnexion</a>
-															</li>
-														{% else %}
-															<li class="nav-item">
-																<a class="nav-link active" aria-current="page" href="{{ path('app_login') }}">Connexion</a>
-															</li>
-														{% endif %}
-														{% if not app.user %}
-															<li class="nav-item">
-																<a class="nav-link active" aria-current="page" href="{{ path('app_register') }}">S'inscrire</a>
-															</li>
-														{% endif %}
-							
-														{% if is_granted('ROLE_USER') %}
-															<li class="nav-item">
-																<a class="nav-link active" aria-current="page" href="{{ path('app_reservation_coach_calendar') }}">Profil</a>
-															</li>
-														{% endif %} #}
+					<nav class="navbar navbar-expand-lg">
+						<div class="container-fluid">
+							<button id='nav-btn' class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarSupportedContent">
+								<ul class="navbar-nav me-auto mb-lg-0">
+									<div class="background-one">
+										<div class="link-container">
+											<a class="nav-link fs-5 fw-normal link-one py-5" aria-current="page" href="{{ path('app_home') }}">
+												<b>Accueil</b>
+											</a>	
+										</div>
+									</div>
+									<div class="background-one">
+										<div class="link-container">
+												<a class="nav-link fs-5 fw-normal link-one py-5" aria-current="page" href="{{ path('app_image') }}">
+													<strong>
+														<b>Dall-E</strong>
+													</b>
+												</a>
+											
+										</div>
+									</div>
+									<div class="background-one">
+										<div class="link-container">
+											
+												<a class="nav-link fs-5 fw-normal link-one py-5" aria-current="page" href="{{ path('app_completion') }}">
+													<strong>
+														<b>DaVinci</strong>
+													</b>
+												</a>
+											
+										</div>
+									</div>
+									<div class="background-one">
+										<div class="link-container">
+											
+												<a class="nav-link fs-5 fw-normal link-one py-5" aria-current="page" href="{{ path('app_chat') }}">
+													<strong>
+														<b>GPT 3.5 turbo</strong>
+													</b>
+												</a>
+											
+										</div>
+									</div>
+									<div class="background-one">
+										<div class="link-container">
+											
+												<a class="nav-link fs-5 fw-normal link-one py-5" aria-current="page" href="{{ path('app_transcribe') }}">
+													<strong>
+														<b>Whisper</strong>
+													</b>
+												</a>
+											
+										</div>
+									</div>
+									{% if is_granted('ROLE_USER') %}
+										<div class="background-one">
+											<div class="link-container">
+												
+													<a class="nav-link fs-5 fw-normal link-one py-5" aria-current="page" href="{{ path('app_logout') }}">
+														<b>Déconnexion</b>
+													</a>
+												
+											</div>
+										</div>
+									{% else %}
+										<div class="background-one">
+											<div class="link-container">
+												{# <li class="nav-item mx-2"> #}
+													<a class="nav-link fs-5 fw-normal link-one py-5" aria-current="page" href="{{ path('app_login') }}">
+														<b>Connexion</b>
+													</a>
+												{# </li> #}
+											</div>
+										</div>
+									{% endif %}
+									{% if not app.user %}
+										<div class="background-one">
+											<div class="link-container">
+												{# <li class="nav-item mx-2"> #}
+													<a class="nav-link fs-5 fw-normal link-one py-5" aria-current="page" href="{{ path('app_register') }}">
+														<b>S'inscrire</b>
+													</a>
+												{# </li> #}
+											</div>
+										</div>
+									{% endif %}
 
-						</ul>
-					</div>
+									{% if is_granted('ROLE_USER') %}
+										<div class="background-one">
+											<div class="link-container">
+												{# <li class="nav-item mx-2"> #}
+													<a class="nav-link fs-5 fw-normal link-one py-5" aria-current="page" href="{{ path('app_reservation_coach_calendar') }}">Profil</a>
+												{# </li> #}
+											</div>
+										</div>
+									{% endif %}
+
+								</ul>
+							</div>
+						</div>
+					</nav>
 				</div>
-			</nav>
 			</div>
-			{# FIN DE LA NAVBAR #}
+		</div>
+		{# FIN DE LA NAVBAR #}
 
-		<div class="d-flex justify-content-center bg-black">
+		<div class="d-flex justify-content-center">
 			<main>
 				{% block body %}{% endblock %}
 			</main>
