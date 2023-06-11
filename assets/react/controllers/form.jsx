@@ -21,8 +21,10 @@ const form = (props) => {
                     placeholder={props.placeholderTitle}
                     required>
                 </textarea>
+                <div class="btn-modeles">
                 <button type='submit' className='ms-1 my-3'><span>{props.buttonTitle}</span><i></i>
                 </button>
+                </div>
             </form>
         </section>
     )

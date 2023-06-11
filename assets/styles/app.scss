@@ -13,7 +13,6 @@
 
 body {
   background-image: url(../img/fond-ai.png);
-  background-repeat: no-repeat;
 }
 
 * {
@@ -165,116 +164,117 @@ textarea {
   color: #FFC745;
 }
 
-//boutton
-button {
-  position: relative;
-  border-radius: 20px;
-  background: black;
-  color: #FFC745;
-  text-decoration: none;
-  text-transform: uppercase;
-  border: none;
-  letter-spacing: 0.1rem;
-  font-size: 1rem;
-  padding: 1rem 3rem;
-  transition: 0.2s;
-}
-
-button:hover {
-  letter-spacing: 0.2rem;
-  padding: 1.1rem 3.1rem;
-  background: var(--clr);
-  color: var(--clr);
-  animation: box 3s infinite;
-}
-
-button::before {
-  content: "";
-  position: absolute;
-  inset: 2px;
-  background: rgb(0, 51, 65);
-  border-radius: 20px;
-}
-
-button span {
-  position: relative;
-  z-index: 1;
-  border-radius: 20px;
-}
-
-button i {
-  border-radius: 20px;
-  position: absolute;
-  inset: 0;
-  display: block;
-}
-
-button i::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 2px;
-  left: 80%;
-  top: -2px;
-  border: 2px solid var(--clr);
-  background: rgb(0, 51, 65);
-  transition: 0.2s;
-}
-
-button:hover i::before {
-  width: 15px;
-  left: 20%;
-  animation: move 3s infinite;
-}
-
-button i::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 2px;
-  left: 20%;
-  bottom: -2px;
-  border: 2px solid var(--clr);
-  background: rgb(0, 51, 65);
-  transition: 0.2s;
-}
-
-button:hover i::after {
-  width: 15px;
-  left: 80%;
-  animation: move 3s infinite;
-}
-
-@keyframes move {
-  0% {
-    transform: translateX(0);
+//BTN MODELES
+.btn-modeles {
+  button {
+    position: relative;
+    border-radius: 20px;
+    background: black;
+    color: #FFC745;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 1rem 3rem;
+    transition: 0.2s;
   }
-
-  50% {
-    transform: translateX(5px);
+  
+  button:hover {
+    letter-spacing: 0.2rem;
+    padding: 1.1rem 3.1rem;
+    background: var(--clr);
+    color: var(--clr);
+    animation: box 3s infinite;
   }
-
-  100% {
-    transform: translateX(0);
+  
+  button::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: rgb(0, 51, 65);
+    border-radius: 20px;
   }
-}
-
-@keyframes box {
-  0% {
-    box-shadow: rgb(0, 51, 65);
+  
+  button span {
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
   }
-
-  50% {
-    box-shadow: 0 0 25px var(--clr);
+  
+  button i {
+    border-radius: 20px;
+    position: absolute;
+    inset: 0;
+    display: block;
   }
-
-  100% {
-    box-shadow: rgb(0, 51, 65);
+  
+  button i::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 80%;
+    top: -2px;
+    border: 2px solid var(--clr);
+    background: rgb(0, 51, 65);
+    transition: 0.2s;
+  }
+  
+  button:hover i::before {
+    width: 15px;
+    left: 20%;
+    animation: move 3s infinite;
+  }
+  
+  button i::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 20%;
+    bottom: -2px;
+    border: 2px solid var(--clr);
+    background: rgb(0, 51, 65);
+    transition: 0.2s;
+  }
+  
+  button:hover i::after {
+    width: 15px;
+    left: 80%;
+    animation: move 3s infinite;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+  
+    50% {
+      transform: translateX(5px);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes box {
+    0% {
+      box-shadow: rgb(0, 51, 65);
+    }
+  
+    50% {
+      box-shadow: 0 0 25px var(--clr);
+    }
+  
+    100% {
+      box-shadow: rgb(0, 51, 65);
+    }
   }
 }
 
 //form register
-
 .img-owl {
   padding: 0;
   margin: 0;
@@ -327,6 +327,8 @@ button:hover i::after {
   }
 }
 
+
+//BTN POLICY 
 .buttonPolicy {
   position: relative;
   padding: 8px 15px;
@@ -340,6 +342,7 @@ button:hover i::after {
   letter-spacing: 0.1rem;
   transition: 0.5s;
   z-index: 1;
+  border-width: 0px;
 }
 
 .buttonPolicy:hover {
@@ -450,6 +453,7 @@ button:hover i::after {
   bottom: 50%;
 }
 
+//AGREE TERM
 .agree-term {
   border-color: rgba(10, 180, 180, 1);
   border-radius: 20px;
@@ -459,7 +463,7 @@ button:hover i::after {
 }
 
 .agree-term p {
-  color: rgba(10, 180, 180, 1) !important;
+  color: rgba(97, 102, 106, 1) !important;
   font-weight: 700;
   font-size: large;
 }
@@ -469,115 +473,111 @@ button:hover i::after {
   justify-content: center;
 }
 
-.login-box button {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: rgba(10, 180, 180, 1);
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: 1.5s;
-  margin-top: 40px;
-  letter-spacing: 4px
-}
 
-.login-box button:hover {
-  background: rgba(10, 180, 180, 1);
-  color: rgba(97, 102, 106, 1);
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(10, 180, 180, 1),
-              0 0 25px rgba(10, 180, 180, 1),
-              0 0 50px rgba(10, 180, 180, 1),
-              0 0 100px rgba(10, 180, 180, 1);
-}
+//BTN REGISTER
+.btn-register {
 
-.login-box button span {
-  position: absolute;
-  display: block;
-}
-
-.login-box button span:nth-child(1) {
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(10, 180, 180, 1));
-  animation: btn-anim1 2s linear infinite;
-}
-
-@keyframes btn-anim1 {
-  0% {
+  .login-box button {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: rgba(10, 180, 180, 1);
+    background: #0D0F0E;
+    overflow: hidden;
+    transition: .5s;
+    border-width: 0px;
+  }
+  
+  .login-box button:hover {
+    background: rgba(10, 180, 180, 1);
+    color: rgba(97, 102, 106, 1);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(10, 180, 180, 1),
+                0 0 25px rgba(10, 180, 180, 1),
+                0 0 50px rgba(10, 180, 180, 1),
+                0 0 100px rgba(10, 180, 180, 1);
+  }
+  
+  .login-box button span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box button span:nth-child(1) {
+    top: 0;
     left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(10, 180, 180, 1));
+    animation: btn-anim1 1s linear infinite;
   }
-  50%,100% {
-    left: 100%;
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
   }
-}
-
-.login-box button span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent, rgba(10, 180, 180, 1));
-  animation: btn-anim2 2s linear infinite;
-  animation-delay: 0.5s
-}
-
-@keyframes btn-anim2 {
-  0% {
+  
+  .login-box button span:nth-child(2) {
     top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgba(10, 180, 180, 1));
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
   }
-  50%,100% {
-    top: 100%;
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
   }
-}
-
-.login-box button span:nth-child(3) {
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, rgba(10, 180, 180, 1));
-  animation: btn-anim3 2s linear infinite;
-  animation-delay: 1s
-}
-
-@keyframes btn-anim3 {
-  0% {
+  
+  .login-box button span:nth-child(3) {
+    bottom: 0;
     right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, rgba(10, 180, 180, 1));
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: 0.5s
   }
-  50%,100% {
-    right: 100%;
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
   }
-}
-
-.login-box button span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, rgba(10, 180, 180, 1));
-  animation: btn-anim4 2s linear infinite;
-  animation-delay: 1.5s
-}
-
-@keyframes btn-anim4 {
-  0% {
+  
+  .login-box button span:nth-child(4) {
     bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, rgba(10, 180, 180, 1));
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: 0.75s
   }
-  50%,100% {
-    bottom: 100%;
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
   }
 }
-
-//video 
-.ball-mp4 {
-  width: 500px;
-  height: auto;
-}
-
-
-

@@ -7,7 +7,7 @@
 {% block body %}
 	<div {{ react_component('header', { title: 'The model used is Davinci of OpenAI to obtain AI text completion' }) }}></div>
     <div {{ react_component('form', { formURL: 'https://127.0.0.1:8000/completion/answer', labelTitle: 'Davinci model will complet your prompt :', placeholderTitle: 'enter your text for Davinci model here...', buttonTitle: 'Send to Davinci' } ) }} class="d-flex justify-content-center"></div>
-	<div class="my-1 d-flex justify-content-center border border-3 border-white rounded-3 screen-size">
+	<div class="my-1 d-flex justify-content-center border-form screen-size">
 		<p class="p-3 fs-4 text-white fw-normal">{{ completion|join('') }}</p>
 	</div>
 {% endblock %}
