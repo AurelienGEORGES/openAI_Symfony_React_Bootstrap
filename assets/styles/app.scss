@@ -3,276 +3,581 @@
 
 // customize some Bootstrap variables
 :root {
-    --clr:#FFC745;
+  --clr: #FFC745;
 }
 
 .screen-size {
-    width: auto;
-    max-width: 900px;
+  width: auto;
+  max-width: 900px;
 }
 
 body {
-    background-image: url(../img/Design-sans-titre.png);
-    background-repeat: no-repeat;
+  background-image: url(../img/fond-ai.png);
+  background-repeat: no-repeat;
 }
 
 * {
-    font-family: "BrunoAceSC-Regular";    
+  font-family: "BrunoAceSC-Regular";
 }
 
 @font-face {
-    font-family: "BrunoAceSC-Regular", Arial;
-    src: url("BrunoAceSC-Regular.ttf") format("ttf");
+  font-family: "BrunoAceSC-Regular", Arial;
+  src: url("BrunoAceSC-Regular.ttf") format("ttf");
 }
 
 #nav-btn {
-    border-style: solid;
-    border-width: 0.3rem;
-    border-color: rgba(0, 157, 202,0.2);
-    border-radius: 0.2rem;
-    color: rgba(0, 157, 202,0.3) !important;
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: rgba(0, 157, 202, 0.2);
+  border-radius: 0.2rem;
+  color: rgba(0, 157, 202, 0.3) !important;
 }
 
 .navbar {
-    margin: 0 !important;
-    --bs-navbar-padding-y: 0 !important;
+  margin: 0 !important;
+  --bs-navbar-padding-y: 0 !important;
 }
 
 .container-fluid {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .background-one {
-    background-color: transparent;
-    width: 140px;
+  background-color: transparent;
+  width: 140px;
 }
 
 .link-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    position: relative;
-    z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 0;
 }
 
 .link-one {
-    color: #009DCA;
-    transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
-    line-height: 1em;
-  }
-  
-  .link-one:hover {
-    color: #111;
-    transition: color 1s cubic-bezier(0.33, 1, 0.68, 1); 
-    /* Thanks Chris Coyier, you got my back always. https://css-tricks.com/different-transitions-for-hover-on-hover-off/ */
-  }
-  
-  .link-one::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    background-color: #009DCA;
-    clip-path: circle(0% at 50% calc(50%));
-    transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
-  }
-  
-.link-one:hover::before {
-    clip-path: circle(100% at 50% 50%);
+  color: #009DCA;
+  transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
+  line-height: 1em;
 }
-  
+
+.link-one:hover {
+  color: #111;
+  transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+  /* Thanks Chris Coyier, you got my back always. https://css-tricks.com/different-transitions-for-hover-on-hover-off/ */
+}
+
+.link-one::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #009DCA;
+  clip-path: circle(0% at 50% calc(50%));
+  transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.link-one:hover::before {
+  clip-path: circle(100% at 50% 50%);
+}
+
 .link-one::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    background-color: #151515;
-  
-    clip-path: polygon(
-      40% 0%,
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #151515;
+
+  clip-path: polygon(40% 0%,
       60% 0%,
       60% 0%,
       40% 0%,
       40% 100%,
       60% 100%,
       60% 100%,
-      40% 100%
-    );
-    transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
+      40% 100%);
+  transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
 }
-  
+
 .link-one:hover::after {
-    clip-path: polygon(
-      40% 10%,
+  clip-path: polygon(40% 10%,
       60% 10%,
       60% 35%,
       40% 35%,
       40% 90%,
       60% 90%,
       60% 65%,
-      40% 65%
-    );
+      40% 65%);
 }
 
 //pour les titres
 .border-title {
-    background-color: black;
-    border-style: solid;
-    border-width: 0.1rem;
-    border-color: rgb(0, 51, 65);
-    border-radius: 20px;  
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+  background-color: #0D0F0E;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: rgb(0, 51, 65);
+  border-radius: 20px;
+  margin: 1rem 1rem;
 }
 
 .border-form {
-    background-color: black;
-    border-style: solid;
-    border-width: 0.1rem;
-    border-color: rgb(0, 51, 65);
-    border-radius: 20px;  
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+  background-color: #0D0F0E;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: rgb(0, 51, 65);
+  border-radius: 20px;
+  margin: 1rem 1rem;
 }
 
 h1 {
-    color: #FFC745 !important;
+  color: #FFC745 !important;
 }
 
 p {
-    color: #FFC745 !important; 
+  color: #FFC745 !important;
 }
 
 .focus-only:focus {
-    outline: 0px solid transparent;
+  outline: 0px solid transparent;
 }
 
 .my-textarea::placeholder {
-    color: #FFC745;
-    font-weight: 700;
+  color: #FFC745;
+  font-weight: 700;
 }
 
 textarea {
-    background-color: black !important;
-    color: #FFC745;
-    border-color: rgb(0, 51, 65);
+  background-color: black !important;
+  color: #FFC745;
+  border-color: rgb(0, 51, 65);
 }
 
 .font-label b {
-    color: #FFC745;
+  color: #FFC745;
 }
 
 //boutton
 button {
-    position: relative;
-    border-radius: 20px;
-    background: black;
-    color: #FFC745;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: none;
-    letter-spacing: 0.1rem;
-    font-size: 1rem;
-    padding: 1rem 3rem;
-    transition: 0.2s;
+  position: relative;
+  border-radius: 20px;
+  background: black;
+  color: #FFC745;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  transition: 0.2s;
+}
+
+button:hover {
+  letter-spacing: 0.2rem;
+  padding: 1.1rem 3.1rem;
+  background: var(--clr);
+  color: var(--clr);
+  animation: box 3s infinite;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: rgb(0, 51, 65);
+  border-radius: 20px;
+}
+
+button span {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+button i {
+  border-radius: 20px;
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+button i::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 80%;
+  top: -2px;
+  border: 2px solid var(--clr);
+  background: rgb(0, 51, 65);
+  transition: 0.2s;
+}
+
+button:hover i::before {
+  width: 15px;
+  left: 20%;
+  animation: move 3s infinite;
+}
+
+button i::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 20%;
+  bottom: -2px;
+  border: 2px solid var(--clr);
+  background: rgb(0, 51, 65);
+  transition: 0.2s;
+}
+
+button:hover i::after {
+  width: 15px;
+  left: 80%;
+  animation: move 3s infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
   }
-  
-  button:hover {
-    letter-spacing: 0.2rem;
-    padding: 1.1rem 3.1rem;
-    background: var(--clr);
-    color: var(--clr);
-    animation: box 3s infinite;
+
+  50% {
+    transform: translateX(5px);
   }
-  
-  button::before {
-    content: "";
-    position: absolute;
-    inset: 2px;
-    background: rgb(0, 51, 65);
-    border-radius: 20px;
+
+  100% {
+    transform: translateX(0);
   }
-  
-  button span {
-    position: relative;
-    z-index: 1;
-    border-radius: 20px;
+}
+
+@keyframes box {
+  0% {
+    box-shadow: rgb(0, 51, 65);
   }
-  button i {
-    border-radius: 20px;
-    position: absolute;
-    inset: 0;
-    display: block;
+
+  50% {
+    box-shadow: 0 0 25px var(--clr);
   }
-  
-  button i::before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 2px;
-    left: 80%;
-    top: -2px;
-    border: 2px solid var(--clr);
-    background: rgb(0, 51, 65);
-    transition: 0.2s;
+
+  100% {
+    box-shadow: rgb(0, 51, 65);
   }
-  
-  button:hover i::before {
-    width: 15px;
-    left: 20%;
-    animation: move 3s infinite;
+}
+
+//form register
+
+.img-owl {
+  padding: 0;
+  margin: 0;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.signupSection {
+  background-color: #0D0F0E;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.inputFields {
+  margin: 5px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid rgba(17, 144, 145, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  background: rgba(97, 102, 106, .2);
+  color: rgba(17, 144, 145, 1);
+  outline: none;
+}
+
+.noBullet {
+  list-style-type: none;
+  padding: 0;
+}
+
+#join-btn {
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-radius: 20px;
+  background: rgba(20, 20, 20, .6);
+  font-size: 18px;
+  color: rgba(97, 102, 106, 1);
+  font-weight: 700;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: .4s;
+  &:hover {
+    background: rgba(20, 20, 20, .8);
+    padding: 10px 50px;
   }
-  
-  button i::after {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 2px;
-    left: 20%;
-    bottom: -2px;
-    border: 2px solid var(--clr);
-    background: rgb(0, 51, 65);
-    transition: 0.2s;
+}
+
+.buttonPolicy {
+  position: relative;
+  padding: 8px 15px;
+  font-size: 1rem;
+  color: var(--color);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  text-shadow: 0 0 15px var(--color);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.buttonPolicy:hover {
+  color: rgba(97, 102, 106, 1);
+  border: 2px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0px var(--color);
+}
+
+.buttonPolicy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color);
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.buttonPolicy:hover::before {
+  transform: scale(1);
+  transition-delay: 0.5s;
+  box-shadow: 0 0 10px var(--color),
+    0 0 30px var(--color),
+    0 0 60px var(--color);
+}
+
+.buttonPolicy span {
+  position: absolute;
+  background: var(--color);
+  pointer-events: none;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--color),
+    0 0 20px var(--color),
+    0 0 30px var(--color),
+    0 0 50px var(--color),
+    0 0 100px var(--color);
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.25s;
+}
+
+.buttonPolicy:hover span {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.buttonPolicy span:nth-child(1),
+.buttonPolicy span:nth-child(3) {
+  width: 20px;
+  height: 2px;
+}
+
+.buttonPolicy:hover span:nth-child(1),
+.buttonPolicy:hover span:nth-child(3) {
+  transform: translateX(0);
+}
+
+.buttonPolicy span:nth-child(2),
+.buttonPolicy span:nth-child(4) {
+  width: 2px;
+  height: 20px;
+}
+
+.buttonPolicy:hover span:nth-child(1),
+.buttonPolicy:hover span:nth-child(3) {
+  transform: translateY(0);
+}
+
+.buttonPolicy span:nth-child(1) {
+  top: calc(50% - 2px);
+  left: -20px;
+  transform-origin: left;
+}
+
+.buttonPolicy:hover span:nth-child(1) {
+  left: 50%;
+}
+
+.buttonPolicy span:nth-child(3) {
+  top: calc(50% - 2px);
+  right: -20px;
+  transform-origin: right;
+}
+
+.buttonPolicy:hover span:nth-child(3) {
+  right: 50%;
+}
+
+.buttonPolicy span:nth-child(2) {
+  left: calc(50% - 2px);
+  top: -20px;
+  transform-origin: top;
+}
+
+.buttonPolicy:hover span:nth-child(2) {
+  top: 50%;
+}
+
+.buttonPolicy span:nth-child(4) {
+  left: calc(50% - 2px);
+  bottom: -20px;
+  transform-origin: bottom;
+}
+
+.buttonPolicy:hover span:nth-child(4 ) {
+  bottom: 50%;
+}
+
+.agree-term {
+  border-color: rgba(10, 180, 180, 1);
+  border-radius: 20px;
+  border-width: 2px;
+  border-style: groove;
+  padding: 10px 10px;
+}
+
+.agree-term p {
+  color: rgba(10, 180, 180, 1) !important;
+  font-weight: 700;
+  font-size: large;
+}
+
+.agree-term div {
+  display: flex;
+  justify-content: center;
+}
+
+.login-box button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: rgba(10, 180, 180, 1);
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1.5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.login-box button:hover {
+  background: rgba(10, 180, 180, 1);
+  color: rgba(97, 102, 106, 1);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(10, 180, 180, 1),
+              0 0 25px rgba(10, 180, 180, 1),
+              0 0 50px rgba(10, 180, 180, 1),
+              0 0 100px rgba(10, 180, 180, 1);
+}
+
+.login-box button span {
+  position: absolute;
+  display: block;
+}
+
+.login-box button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(10, 180, 180, 1));
+  animation: btn-anim1 2s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
   }
-  
-  button:hover i::after {
-    width: 15px;
-    left: 80%;
-    animation: move 3s infinite;
+  50%,100% {
+    left: 100%;
   }
-  
-  @keyframes move {
-    0% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(5px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+}
+
+.login-box button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(10, 180, 180, 1));
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: 0.5s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
   }
-  
-  @keyframes box {
-    0% {
-      box-shadow: rgb(0, 51, 65);
-    }
-    50% {
-      box-shadow: 0 0 25px var(--clr);
-    }
-    100% {
-      box-shadow: rgb(0, 51, 65);
-    }
+  50%,100% {
+    top: 100%;
   }
-  
+}
+
+.login-box button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, rgba(10, 180, 180, 1));
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, rgba(10, 180, 180, 1));
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+//video 
+.ball-mp4 {
+  width: 500px;
+  height: auto;
+}
+
+
+

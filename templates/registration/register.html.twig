@@ -1,21 +1,66 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Register
+{% endblock %}
 
 {% block body %}
-    {% for flash_error in app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
-    {% endfor %}
 
-    <h1>Register</h1>
+	{% for flash_error in app.flashes('verify_email_error') %}
+		<div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+	{% endfor %}
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
-
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+	<div class='d-flex flex-row flex-wrap border-form'>
+		<div>
+			<img src="{{ asset('assets/images/owl-g3505bef4d_640.jpg') }}" alt="owl with cyan eyes" class="img-fluid img-owl"/>
+		</div>
+		<div class='pe-2 pb-2 d-flex align-items-center'>
+			<div>
+				{{ form_start(registrationForm) }}
+				<ul class="noBullet">
+					<div class='d-flex justify-content-center my-2'>
+						<li>
+							{{ form_row(registrationForm.pseudo, {'attr': {'class': 'inputFields', 'placeholder': 'pseudonym'}}) }}
+						</li>
+					</div>
+					<div class='d-flex justify-content-center my-2'>
+						<li>
+							{{ form_row(registrationForm.email, {'attr': {'class': 'inputFields', 'placeholder': 'email'}}) }}
+						</li>
+					</div>
+					<div class='d-flex justify-content-center my-2'>
+						<li>
+							{{ form_row(registrationForm.plainPassword, {'attr': {'class': 'inputFields', 'placeholder': 'password'}}) }}
+						</li>
+					</div>
+					<div class='my-5 d-flex justify-content-center agree-term flex-column'>
+						<li>
+							<div class='my-3'>
+								<a class="buttonPolicy" href="{{ path('app_privacy_policy') }}" style="--color:#0ab4b4;">
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<b>privacy policy</b>
+								</a>
+							</div>
+						</li>
+						<li class='mt-3'>
+							<p>Are you agree with the privacy policy?</p>
+							{{ form_row(registrationForm.agreeTerms) }}
+						</li>
+						<li><div class="login-box">
+							<button class="user-box" type='submit'>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<b>Submit</b>
+							</button>
+						</div></li>
+					</ul>
+					{{ form_end(registrationForm) }}
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

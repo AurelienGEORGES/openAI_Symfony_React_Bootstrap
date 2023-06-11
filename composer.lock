@@ -3099,7 +3099,7 @@
         },
         {
             "name": "symfony/asset",
-            "version": "v6.3.0-BETA1",
+            "version": "v6.3.0-RC1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/asset.git",
@@ -3148,7 +3148,7 @@
             "description": "Manages URL generation and versioning of web assets such as CSS stylesheets, JavaScript files and image files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/asset/tree/v6.3.0-BETA1"
+                "source": "https://github.com/symfony/asset/tree/v6.3.0-RC1"
             },
             "funding": [
                 {
