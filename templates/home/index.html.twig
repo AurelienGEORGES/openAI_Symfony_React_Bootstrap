@@ -5,4 +5,13 @@
 
 {% block body %}
 	<div {{ react_component('header', { title: 'Try different models from openAI' } ) }}></div>
+	<article class='screen-size border-title'>
+            <h2 class='fs-2 p-2'>When we ask to GPT 3.5 Turbo what is Artificial Intelligence it responds :</h2>
+            <p class='text-white fs-5 p-2'>Artificial intelligence (AI) refers to the ability of computer systems to perform tasks that typically require human intelligence, such as recognizing speech, detecting objects, making decisions, and solving problems. AI can be achieved through various techniques such as machine learning, deep learning, and natural language processing, and it is used in a wide range of applications, including self-driving cars, virtual assistants, medical diagnosis, fraud detection, and more. The goal of AI is to infuse human-like intelligence into machines, making them smarter and more efficient in performing complex tasks.</p>
+            <h3 class='fs-2 p-2'>When we ask to DaVinci model what is deep learning it responds :</h3>
+            <p class='text-white fs-5 p-2'>Deep learning is a subset of machine learning which uses algorithms to model high-level abstractions in data. It is based on artificial neural networks which are inspired by the structure and function of the brain. Deep learning models are used for a wide variety of prediction tasks, such as image recognition, text analyses, speech recognition, and natural language processing.</p>
+            <h4 class='fs-2 p-2'>When we ask to Dall-E model to generate an image of a car it can produce an image like this :</h4>
+            <img src="{{ asset('assets/images/img-0pxug7OEMZYZPrvKOVYtrYf7.png') }}" class='img-fluid p-1' alt="a beautiful car"/>
+            <h5 class='fs-2 p-2'>Perhaps have you certain questions to ask to different models of OpenAI API?</h5>
+    </article>
 {% endblock %}

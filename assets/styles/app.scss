@@ -137,7 +137,7 @@ body {
   margin: 1rem 1rem;
 }
 
-h1 {
+h1, h2, h3, h4, h5 {
   color: #FFC745 !important;
 }
 
@@ -179,7 +179,7 @@ textarea {
     padding: 1rem 3rem;
     transition: 0.2s;
   }
-  
+
   button:hover {
     letter-spacing: 0.2rem;
     padding: 1.1rem 3.1rem;
@@ -187,7 +187,7 @@ textarea {
     color: var(--clr);
     animation: box 3s infinite;
   }
-  
+
   button::before {
     content: "";
     position: absolute;
@@ -195,20 +195,20 @@ textarea {
     background: rgb(0, 51, 65);
     border-radius: 20px;
   }
-  
+
   button span {
     position: relative;
     z-index: 1;
     border-radius: 20px;
   }
-  
+
   button i {
     border-radius: 20px;
     position: absolute;
     inset: 0;
     display: block;
   }
-  
+
   button i::before {
     content: "";
     position: absolute;
@@ -220,13 +220,13 @@ textarea {
     background: rgb(0, 51, 65);
     transition: 0.2s;
   }
-  
+
   button:hover i::before {
     width: 15px;
     left: 20%;
     animation: move 3s infinite;
   }
-  
+
   button i::after {
     content: "";
     position: absolute;
@@ -238,36 +238,36 @@ textarea {
     background: rgb(0, 51, 65);
     transition: 0.2s;
   }
-  
+
   button:hover i::after {
     width: 15px;
     left: 80%;
     animation: move 3s infinite;
   }
-  
+
   @keyframes move {
     0% {
       transform: translateX(0);
     }
-  
+
     50% {
       transform: translateX(5px);
     }
-  
+
     100% {
       transform: translateX(0);
     }
   }
-  
+
   @keyframes box {
     0% {
       box-shadow: rgb(0, 51, 65);
     }
-  
+
     50% {
       box-shadow: 0 0 25px var(--clr);
     }
-  
+
     100% {
       box-shadow: rgb(0, 51, 65);
     }
@@ -321,6 +321,7 @@ textarea {
   padding: 10px 30px;
   cursor: pointer;
   transition: .4s;
+
   &:hover {
     background: rgba(20, 20, 20, .8);
     padding: 10px 50px;
@@ -449,7 +450,7 @@ textarea {
   transform-origin: bottom;
 }
 
-.buttonPolicy:hover span:nth-child(4 ) {
+.buttonPolicy:hover span:nth-child(4) {
   bottom: 50%;
 }
 
@@ -490,22 +491,22 @@ textarea {
     transition: .5s;
     border-width: 0px;
   }
-  
+
   .login-box button:hover {
     background: rgba(10, 180, 180, 1);
     color: rgba(97, 102, 106, 1);
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(10, 180, 180, 1),
-                0 0 25px rgba(10, 180, 180, 1),
-                0 0 50px rgba(10, 180, 180, 1),
-                0 0 100px rgba(10, 180, 180, 1);
+      0 0 25px rgba(10, 180, 180, 1),
+      0 0 50px rgba(10, 180, 180, 1),
+      0 0 100px rgba(10, 180, 180, 1);
   }
-  
+
   .login-box button span {
     position: absolute;
     display: block;
   }
-  
+
   .login-box button span:nth-child(1) {
     top: 0;
     left: -100%;
@@ -514,16 +515,18 @@ textarea {
     background: linear-gradient(90deg, transparent, rgba(10, 180, 180, 1));
     animation: btn-anim1 1s linear infinite;
   }
-  
+
   @keyframes btn-anim1 {
     0% {
       left: -100%;
     }
-    50%,100% {
+
+    50%,
+    100% {
       left: 100%;
     }
   }
-  
+
   .login-box button span:nth-child(2) {
     top: -100%;
     right: 0;
@@ -533,16 +536,18 @@ textarea {
     animation: btn-anim2 1s linear infinite;
     animation-delay: .25s
   }
-  
+
   @keyframes btn-anim2 {
     0% {
       top: -100%;
     }
-    50%,100% {
+
+    50%,
+    100% {
       top: 100%;
     }
   }
-  
+
   .login-box button span:nth-child(3) {
     bottom: 0;
     right: -100%;
@@ -552,16 +557,18 @@ textarea {
     animation: btn-anim3 1s linear infinite;
     animation-delay: 0.5s
   }
-  
+
   @keyframes btn-anim3 {
     0% {
       right: -100%;
     }
-    50%,100% {
+
+    50%,
+    100% {
       right: 100%;
     }
   }
-  
+
   .login-box button span:nth-child(4) {
     bottom: -100%;
     left: 0;
@@ -571,12 +578,14 @@ textarea {
     animation: btn-anim4 1s linear infinite;
     animation-delay: 0.75s
   }
-  
+
   @keyframes btn-anim4 {
     0% {
       bottom: -100%;
     }
-    50%,100% {
+
+    50%,
+    100% {
       bottom: 100%;
     }
   }
